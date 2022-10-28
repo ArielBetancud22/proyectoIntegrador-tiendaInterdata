@@ -110,6 +110,17 @@ public class tiendaInterdata {
             System.out.println("::...................................................................................................................::\n");
             
             for (i = 0; i <= 2; i++){
+		    for (j = 0; j < 2; j++){
+                    	matriz[0][0] = " 1. Remeras";
+                   	matriz[0][1] = " 2. Buzos";
+                    	matriz[0][2] = " 3. Camperas";
+                    	matriz[1][0] = " 4. Jeans";
+                    	matriz[1][1] = " 5. Pantalones Joggin";
+                    	matriz[1][2] = " 6. Camisas";
+                    	matriz[2][0] = " 7. Trajes";
+                    	matriz[2][1] = " 8. Ver carrito de compras";
+                    	matriz[2][2] = " 9. Salir de la cuenta";
+                }
                 
             }
         }
