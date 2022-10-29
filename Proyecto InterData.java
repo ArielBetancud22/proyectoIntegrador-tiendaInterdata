@@ -64,7 +64,7 @@ public class tiendaInterdata {
                     else {
                             // ESPERAR 1 SEG
                             //BORRAR PANTALLA
-                            productos(); --------------------------------------------------------// De lo contrario lo lleva al usuario directamente al subproceso de menú de productos
+                            productos(); // De lo contrario lo lleva al usuario directamente al subproceso de menú de productos
                     }
                     break;
                 case 2: // La opción 2 contiene la acción para crear una cuenta nueva 
@@ -83,7 +83,7 @@ public class tiendaInterdata {
                     System.out.println("Redireccionando...");
                     // ESPERAR 2 SEG
                     // LIMPIAR PANTALLA
-                    productos(); --------------------------------------------------// Una vez hecha la acción se lleva al subproceso de menú de productos 
+                    productos(); // Una vez hecha la acción se lleva al subproceso de menú de productos 
                     break;
                 default: // Si no se cumple la eleccion de una opcion entre 1-2, muestra el siguiente cartel y vuelve a subproceso de menu principal
                     System.out.println("");
@@ -121,9 +121,115 @@ public class tiendaInterdata {
                     	matriz[2][1] = " 8. Ver carrito de compras";
                     	matriz[2][2] = " 9. Salir de la cuenta";
                 }
-                
+            }
+	    for (i = 0; i < 2; i++){  // Muestra el catalogo imprimiendo la matriz
+                for (j = 0; j < 2; j++){
+                    System.out.println(matriz[i][j]);
+                }
+            }
+            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "\nIngrese la categoría deseada: "));
+            // Limpiar Pantalla
+            switch (opcion){   // Segun la opcion que elija el usuario, el switch lo va a redirigir a los distintos subprocesos
+                case 1:
+                    MenuRemeras(compraTotal, CompraProductosR);
+                    break;
+                case 2:
+                    MenuBuzos(compraTotal, CompraProductosB);
+                    break;
+                case 3:
+                    MenuCamperas(compraTotal, CompraProductosC);
+                    break;
+                case 4:
+                    MenuJeans(compraTotal,CompraProductosJ);
+                    break;
+                case 5:
+                    MenuPantalones(compraTotal, CompraProductosP);
+                case 6:
+                    MenuCamisas(compraTotal, CompraProductosCa);
+                    break;
+                case 7:
+                    MenuTrajes(compraTotal, CompraProductosTra);
+                    break;
+                case 8:
+                    System.out.println("::....................................................................................................................................................::");
+                    System.out.println("::                                                          :: CARRITO DE COMPRAS ::                                                                   ::");
+                    System.out.println("::....................................................................................................................................................::\n");
+                    JOptionPane.showMessageDialog(null, "Los productos agregados al carrito son: "+ CompraProductosR +", "+ CompraProductosB +", "+ CompraProductosC+", "+ CompraProductosJ +", "+ CompraProductosCa +", "+ CompraProductosTra +"\n");
+                    JOptionPane.showMessageDialog(null, "El monto total de los productos añadidos al carrito es: "+ compraTotal +"\n\n");
+                    
+                    MetodoPago(compraTotal); // El MetodoPago lo definiremos al final.
+                    // Limpiar Pantalla
+                    break;
+                case 9:
+                    salir = true;
+                    break;
             }
         }
-        while (opcion == 9); //Repito subproceso hasta opción 6 --> Ver carrito de compras o elija el menú según producto
+        while (opcion != 9); 
+    }
+	
+    // Subproceso del menu remeras
+    public static void menuRemeras(float CompraTotal, String CompraProductos) {   // No se como funciona un subproceso por parametros (VERIFICAR).
+        int modelo, cantidad, compra, agregarOpcion;
+        float precio;
+        String nombreModelo;
+        boolean salida = false;
+        
+        System.out.println("::..............................................................................................::");
+        System.out.println("::                                         CATEGORIA REMERAS                                    ::");
+        System.out.println("::                                        MODELOS DISPONIBLES                                   ::");
+        System.out.println("::..............................................................................................::\n");
+        
+        System.out.println("1. Remera Alzakaba: $10740");
+        System.out.println("2. Remera Adventure: $10950");
+        System.out.println("3. Remera Steeze: $10580");
+        System.out.println("4. Remera Camber: $10000");
+        System.out.println("5. Remera Pocket: $9550");
+        System.out.println("6. Remera Sketch: $9200");
+        System.out.println("7. Volver.\n");
+        
+        modelo = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la opcion de modelo: \n"));
+        
+        switch (modelo){
+            case 1:
+                nombreModelo = "Remera Alzakaba";
+                precio = 10740;
+                break;
+            case 2:
+                nombreModelo = "Remera Adventure";
+                precio = 10950;
+                break;
+            case 3:
+                nombreModelo = "Remera Steeze";
+                precio = 10580;
+                break;
+            case 4:
+                nombreModelo = "Remera Camber";
+                precio = 10000;
+                break;
+            case 5:
+                nombreModelo = "Remera Pocket";
+                precio = 9550;
+                break;
+            case 6:
+                nombreModelo = "Remera Sketch";
+                precio = 9200;
+                break;
+            case 7:
+                salida = true;
+                productos();
+                break;     
+        }
+        if (salida == false){
+            System.out.println("¿Añadir al carrito?");
+            System.out.println("1. Si");
+            System.out.println("2. No");
+            agregarOpcion = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Añadir al carrito?: "));
+            
+            if (agregarOpcion == 1){
+                cantidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad de prendas: "));
+                CompraProductos = // ¿Como funcionan los parametros del subproceso?
+            }
+        }
     }
 }
