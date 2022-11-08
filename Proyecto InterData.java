@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class tiendaInterdata {
     public static void main(String[] args) {
-        /*System.out.println();
+          /*System.out.println();
         System.out.println("::.....................................................................................................................::"); ;
 	System.out.println("");
 	System.out.println("::       °°°°°°°°°   °°°°°   °°°  °°°°°°°°°°°  °°°°°°°°°   °°°°°°°°°   °°°°°°°°          °°      °°°°°°°°°°°     °°        ::");
@@ -18,7 +18,8 @@ public class tiendaInterdata {
 	System.out.println("");
 	System.out.println("::.....................................................................................................................::") ;*/
     }
-     
+	
+        
     public static void inicioTienda(){
         int eleccionInicio = 0;
         String usuario, usuario1, clave, clave1 = null;
@@ -104,27 +105,18 @@ public class tiendaInterdata {
         do {
             System.out.println(".......................................................................................................................");
             System.out.println("::                                                         CATEGORIAS                                                ::");
-            System.out.println("::                                             COLECCIÓN OTOÑO- INVIERNO 2022                                        ::");
+            System.out.println("::                                             COLECCIÓN primavera - verano 2022                                        ::");
             System.out.println("::...................................................................................................................::\n");
-            
-            for (i = 0; i <= 2; i++){
-		    for (j = 0; j < 2; j++){
-                    	matriz[0][0] = " 1. Remeras";
-                   	matriz[0][1] = " 2. Buzos";
-                    	matriz[0][2] = " 3. Camperas";
-                    	matriz[1][0] = " 4. Jeans";
-                    	matriz[1][1] = " 5. Pantalones Joggin";
-                    	matriz[1][2] = " 6. Camisas";
-                    	matriz[2][0] = " 7. Trajes";
-                    	matriz[2][1] = " 8. Ver carrito de compras";
-                    	matriz[2][2] = " 9. Salir de la cuenta";
-                }
-            }
-	    for (i = 0; i < 2; i++){  // Muestra el catalogo imprimiendo la matriz
-                for (j = 0; j < 2; j++){
-                    System.out.println(matriz[i][j]);
-                }
-            }
+            System.out.println("");
+            System.out.println(" 1. Remeras");
+            System.out.println(" 2. Buzos");
+            System.out.println(" 3. Camperas");
+            System.out.println(" 4. Jeans");
+            System.out.println(" 6. Camisas");
+            System.out.println(" 7. Trajes");
+            System.out.println(" 8. Ver carrito de compras");
+            System.out.println(" 9. Salir de la cuenta");
+                
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "\nIngrese la categoría deseada: "));
             // Limpiar Pantalla
             switch (opcion){   // Segun la opcion que elija el usuario, el switch lo va a redirigir a los distintos subprocesos
@@ -553,7 +545,7 @@ public class tiendaInterdata {
                 cantidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad de prendas: "));
                 compraProductos = compraProductos.concat(nombreModelo);
                 System.out.println(".........................................................................................................");
-                System.out.println("                                   :: AÑADIDO AL CARRITO ::                                              ");
+                System.out.println("                                   :: AÑADIDO AL CARRITO ::                           ");
                 System.out.println(".........................................................................................................\n");
                 System.out.println("Prodcuto añadido al carrito: "+ nombreModelo);
                 System.out.println("cantidad: "+ cantidad);
@@ -843,3 +835,4 @@ public class tiendaInterdata {
         }   
     } 
 }
+
