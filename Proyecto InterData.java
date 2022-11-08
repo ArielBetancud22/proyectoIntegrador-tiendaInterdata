@@ -1,4 +1,3 @@
-
 package proyectoPseint;
 
 import javax.swing.JOptionPane;
@@ -19,8 +18,7 @@ public class tiendaInterdata {
 	System.out.println("");
 	System.out.println("::.....................................................................................................................::") ;*/
     }
-	
-        
+     
     public static void inicioTienda(){
         int eleccionInicio = 0;
         String usuario, usuario1, clave, clave1 = null;
@@ -555,7 +553,7 @@ public class tiendaInterdata {
                 cantidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad de prendas: "));
                 compraProductos = compraProductos.concat(nombreModelo);
                 System.out.println(".........................................................................................................");
-                System.out.println("                                   :: AÑADIDO AL CARRITO ::                           ");
+                System.out.println("                                   :: AÑADIDO AL CARRITO ::                                              ");
                 System.out.println(".........................................................................................................\n");
                 System.out.println("Prodcuto añadido al carrito: "+ nombreModelo);
                 System.out.println("cantidad: "+ cantidad);
