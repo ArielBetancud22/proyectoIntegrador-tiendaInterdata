@@ -5,8 +5,9 @@ import javax.swing.JOptionPane;
 
 public class metodos {
     public void InicioTienda(){
-        int eleccionInicio = 0;
-        String usuario, usuario1, clave, clave1 = null;
+        int eleccionInicio;
+        String usuario = null, usuario1;
+        String clave = null, clave1;
         boolean salida = false;
         do{
             System.out.println("......................................................................................................................");
@@ -14,17 +15,17 @@ public class metodos {
             System.out.println("::                                             TIENDA MAYORISTA DE ROPA PARA HOMBRE                                 ::");
             System.out.println("::..................................................................................................................::");
             System.out.println(" ");
-            System.out.println(" Somos una tienda mayorista vendemos por curva de 5 unidades, talles y colores sin elección");
-            System.out.println(" "); // MenÚ principal con opciones 
-            System.out.println(" 1. Iniciar sesión con su cuenta"); 
+            System.out.println(" Somos una tienda mayorista vendemos por curva de 5 unidades, talles y colores sin elecciÃ³n");
+            System.out.println(" "); // MenÃš principal con opciones 
+            System.out.println(" 1. Iniciar sesiÃ³n con su cuenta"); 
             System.out.println(" 2. Registrar nuevo usuario");
-            System.out.println(" 3. Salir de la página");
+            System.out.println(" 3. Salir de la pÃ¡gina");
             System.out.println(" ");
-            eleccionInicio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una opción: "));
+            eleccionInicio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una opciÃ³n: "));
             
-            usuario = "usuario123";
-            clave = "clave123";
-            
+            usuario1 = "usuario123";
+            clave1 = "clave123";
+
             switch(eleccionInicio){
                 case 1 -> {
                     //Según opción 1 la acción es pedir datos para acceder a mi cuenta
