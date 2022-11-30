@@ -168,14 +168,15 @@ public class Productos {
                     trajes.menuTrajes(compraTotal, compraProductosTra);
                     break;
                 case 8:
+                    MetodoPago pago = new MetodoPago();
+                    pago.metodoPago(compraTotal);
                     System.out.println("::....................................................................................................................................................::");
                     System.out.println("::                                                          :: CARRITO DE COMPRAS ::                                                                   ::");
                     System.out.println("::....................................................................................................................................................::\n");
                     System.out.println("Los productos agregados al carrito son: " + compraProductosR + ", " + compraProductosB + ", " + compraProductosC + ", " + compraProductosJ + ", " + compraProductosCa + ", " + compraProductosTra);
                     System.out.println("El monto total es: " + compraTotal);
 
-                    MetodoPago pago = new MetodoPago();
-                    pago.metodoPago(compraTotal);
+                  
                     break;
                 case 9:
                     salir = true;
