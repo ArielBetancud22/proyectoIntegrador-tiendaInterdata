@@ -111,7 +111,7 @@ public class InicioTienda {
             clave = "1234";
             switch(opcion){
                 case 1 -> {
-                    
+            
                     //Según opción 1 la acción es pedir datos para acceder a mi cuenta
                     System.out.println(".........................................................................................................");
                     System.out.println("                                  :: MI CUENTA ::                               ");
@@ -124,13 +124,13 @@ public class InicioTienda {
                     Scanner password = new Scanner(System.in);
                     System.out.print("Clave: ");
                     clave1 = password.nextLine();
+                    
+                    if ((usuario.equals(usuario1)) && (clave.equals(clave1))){
+                        System.out.println("Redireccionando ....");
+                        llamada.productos();
+                    }
 
-                    System.out.println("");
-                    //ESPERAR 1/2 SEG
-                    System.out.println("Redireccionando ....");
-                    //ESPERAR 2 SEG
-
-                    if ((!usuario.equals(usuario1)) || (!clave.equals(clave1))) {
+                    else {
                         System.out.println("Los datos ingresados son incorrectos");
                         inicioTienda();
                     }
