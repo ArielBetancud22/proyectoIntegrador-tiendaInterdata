@@ -140,29 +140,29 @@ public class MenuRemeras {
 
         if (salida == false) {
             Scanner añadir = new Scanner(System.in);
-            System.out.print("Aniadir al carrito? [1. Si / 2. No]: ");
+            System.out.print("¿Desea añadir al carrito? [1. Si / 2. No]: ");
             agregarOpcion = añadir.nextInt();
         }
 
         if (agregarOpcion == 1) {
             Scanner cant = new Scanner(System.in);
-            System.out.println("Cantidad de prendas: ");
+            System.out.println("Cantidad de curvas: ");
             cantidad = cant.nextInt();
             compraProductos += nombreModelo;
             //Limpiar Pantalla
             System.out.println(".........................................................................................................");
-            System.out.println("                                   :: ANIADIDO AL CARRITO ::                           ");
+            System.out.println("::                                          AÑADIDO AL CARRITO                                        ::");
             System.out.println(".........................................................................................................\n");
-            System.out.println("Prodcuto aniadido al carrito: " + nombreModelo);
-            System.out.println("cantidad: " + cantidad);
-            System.out.println("Precio por prenda $: " + precio);
+            System.out.println("Producto: " + nombreModelo);
+            System.out.println("Cantidad: " + cantidad);
+            System.out.println("Precio $: " + precio);
             compra = (int) (precio * cantidad);
             compraTotal += compra;
-            System.out.println("Total a pagar $: " + compra);
+            System.out.println("Precio total $: " + compra);
             //Esperar 5 segundos
             // Limpiar pantalla
         } else {
-            System.out.println("Volviendo a la seccion productos\n");
+            System.out.println("Volviendo a la sección productos\n");
             // Esperar 1/2 segundo
             System.out.println("Aguarde unos segundos...");
             // Esperar 2 segundos
