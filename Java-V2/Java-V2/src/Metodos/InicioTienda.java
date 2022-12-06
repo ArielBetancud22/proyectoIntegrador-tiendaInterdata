@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class InicioTienda {
 
     private int eleccionInicio;
-    private String usuario, usuario1, clave, clave1;
+    private String usuario, usuario1, clave, clave1,clave2;
     private int opcion;
     private boolean salir;
 
@@ -18,6 +18,7 @@ public class InicioTienda {
         this.usuario1 = usuario1;
         this.clave = clave;
         this.clave1 = clave1;
+        this.clave2 = clave2;
         this.opcion = opcion;
         this.salir = salir;
     }
@@ -68,8 +69,14 @@ public class InicioTienda {
 
     public void setClave1(String clave1) {
         this.clave1 = clave1;
+    } 
+    public String getClave2() {
+        return clave1;
     }
 
+    public void setClave2(String clave1) {
+        this.clave1 = clave1;
+    }
     public int getOpcion() {
         return opcion;
     }
@@ -87,84 +94,97 @@ public class InicioTienda {
         this.setUsuario1(usuario1);
         salir = true;
         this.setSalir(salir);
-
+        
         Productos llamada = new Productos();
         OUTER:
-
-        while (opcion != 3) {
-            System.out.println("......................................................................................................................");
-            System.out.println("::                                                        INTERDATA                                                 ::");
-            System.out.println("::                                             TIENDA MAYORISTA DE ROPA PARA HOMBRE                                 ::");
-            System.out.println("::..................................................................................................................::");
+        
+        while(opcion != 3){
+            System.out.println("..................................................................................................................");
+            System.out.println("::                                                   INTERDATA                                                  ::");
+            System.out.println("::                                        TIENDA MAYORISTA DE ROPA PARA HOMBRE                                  ::");
+            System.out.println("::..............................................................................................................::");
             System.out.println(" ");
             System.out.println(" Somos una tienda mayorista vendemos por curva de 5 unidades, talles y colores sin eleccion");
             System.out.println(" ");
-            System.out.println(" 1. Iniciar sesion con su cuenta");
+            System.out.println(" 1. Iniciar sesión con su cuenta");
             System.out.println(" 2. Registrar nuevo usuario");
-            System.out.println(" 3. Salir de la pagina");
+            System.out.println(" 3. Salir de la página");
             System.out.println(" ");
             Scanner entrada = new Scanner(System.in);
-            System.out.print("Ingrese una opcion: ");
+            System.out.print("Ingrese una opción: ");
             opcion = entrada.nextInt();
 
             usuario = "usuario123";
             clave = "1234";
-            switch (opcion) {
+            switch(opcion){
                 case 1 -> {
-
+                    
                     //Según opción 1 la acción es pedir datos para acceder a mi cuenta
                     System.out.println(".........................................................................................................");
-                    System.out.println("                                  :: MI CUENTA ::                               ");
-                    System.out.println(".........................................................................................................");
-                    System.out.println("");
+                    System.out.println("::                                            MI CUENTA                                                ::");
+                    System.out.println("::.....................................................................................................::");
                     Scanner user = new Scanner(System.in);
-                    System.out.print("Usuario: ");
+                    System.out.print("\nUSUARIO: ");
                     usuario1 = user.nextLine();
-                    Scanner password = new Scanner(System.in);
-                    System.out.print("Clave: ");
-                    clave1 = password.nextLine();
-                    System.out.println("");
 
-                    if ((!usuario.equals(usuario1)) || (!clave.equals(clave1))) {
-                        System.out.println("Los datos ingresados son incorrectos");
-                        inicioTienda();
-                    } else {
+                    Scanner password = new Scanner(System.in);
+                    System.out.print("CONTRASEÑA: ");
+                    clave1 = password.nextLine();
+                    
+                    if ((usuario.equals(usuario1)) && (clave.equals(clave1))){
                         System.out.println("Redireccionando ....");
                         llamada.productos();
+                    }
+
+                    else {
+                        System.out.println("Los datos ingresados son incorrectos");
+                        System.out.println("\nPor favor inténtelo nuevamente");
+                        inicioTienda();
                     }
                 }
                 case 2 -> {
                     System.out.println(".........................................................................................................");
-                    System.out.println("                                  :: CREANDO USUARIO EN TIENDA INTERDATA ::                               ");
-                    System.out.println(".........................................................................................................");
-                    System.out.println("Ingrese los datos requeridos");
+                    System.out.println("::                                 CREANDO USUARIO EN TIENDA INTERDATA                                 ::");
+                    System.out.println("::.....................................................................................................::");
+                    System.out.println("\nIngrese los datos requeridos");
 
                     Scanner user1 = new Scanner(System.in);
-                    System.out.print("Ingrese su usuario: ");
+                    System.out.print("\nNombre de usuario: ");
                     usuario1 = user1.nextLine();
 
                     Scanner password1 = new Scanner(System.in);
-                    System.out.print("Ingrese contrasenia: ");
+                    System.out.print("Contraseña: ");
                     clave1 = password1.nextLine();
 
-                    System.out.println("");
-                    System.out.println("Su cuenta fue creada con exito!");
-                    System.out.println("");
-                    // ESPERAR 1 SEG
-                    System.out.println("Redireccionando...");
-                    // ESPERAR 2 SEG
-                    // LIMPIAR PANTALLA
-                    // Una vez hecha la acción se lleva al subproceso de menú de productos 
-                    llamada.productos();
-                }
+                    Scanner password2 = new Scanner(System.in);
+                    System.out.print("Repita la contraseña: ");
+                    clave2 = password2.nextLine();
+                    
+                    if ((clave1.equals(clave2))){
+                        System.out.println("");
+                        System.out.println("¡Su cuenta fue creada con éxito!");
+                        System.out.println("");
+                        System.out.println("Redireccionando...");
+                        // Una vez hecha la acción se lleva al subproceso de menú de productos 
+                        llamada.productos();              
+                    }
+                    else{
+                        System.out.println("\nLas contraseñas ingresadas no coinciden");
+                        System.out.println("Por favor inténtelo nuevamente");
+                        inicioTienda();
+                    }
+                }          
+                                        
                 case 3 -> {
-                    System.out.println("saliendo de la tienda...");
+                    System.out.println("Saliendo de la página...");
+                    System.out.println("¡Gracias por visitarnos!");
                     break;
                 }
                 default -> {
-                    System.out.println("OPCIÓN INCORRECTA\n");
+                    System.out.println("La opción ingresada es incorrecta");
+                    System.out.println("\nPor favor inténtelo nuevamente..");
                 }
-            }
+            }       
         }
     }
 }
