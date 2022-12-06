@@ -141,14 +141,14 @@ public class MenuCamperas {
 
         if (salida == false) {
             Scanner opcion = new Scanner(System.in);
-            System.out.print("Aniadir al carrito? [1. Si / 2. No]: ");
+            System.out.print("¿Desea añadir al carrito? [1. Si / 2. No]: ");
             agregarOpcion = opcion.nextInt();
         }
 
         switch (agregarOpcion) {
             case 1 -> {
                 Scanner cant = new Scanner(System.in);
-                System.out.print("Cantidad de prendas: ");
+                System.out.print("Cantidad de curvas: ");
                 cantidad = cant.nextInt();
                 compraProductos += nombreModelo;
                 System.out.println(".........................................................................................................");
