@@ -133,7 +133,6 @@ public class MenuJeans {
             }
             case 7 -> {
                 salida = true;
-                //Limpiar Pantalla
                 Productos llamada = new Productos();
                 llamada.productos();
             }
@@ -141,7 +140,7 @@ public class MenuJeans {
 
         if (salida == false) {
             Scanner opcion = new Scanner(System.in);
-            System.out.print("Aniadir al carrito? [1. Si / 2. No]: ");
+            System.out.print("¿Desea añadir al carrito? [1. Si / 2. No]: ");
             agregarOpcion = opcion.nextInt();
         }
 
@@ -152,14 +151,14 @@ public class MenuJeans {
                 cantidad = cant.nextInt();
                 compraProductos += nombreModelo;
                 System.out.println(".........................................................................................................");
-                System.out.println("                                   :: ANIADIDO AL CARRITO ::                           ");
+                System.out.println("::                                          AÑADIDO AL CARRITO                                        ::");
                 System.out.println(".........................................................................................................\n");
-                System.out.println("Producto aniadido al carrito: " + nombreModelo);
-                System.out.println("cantidad: " + cantidad);
-                System.out.println("Precio por prenda $: " + precio);
+                System.out.println("Producto: " + nombreModelo);
+                System.out.println("Cantidad: " + cantidad);
+                System.out.println("Precio $: " + precio);
                 compra = (int) (precio * cantidad);
                 compraTotal += compra;
-                System.out.println("Precio total de lo aniadido $: " + compra);
+                System.out.println("Precio total $: " + compra);
             }
             case 2 -> {
                 System.out.println("Volviendo a la seccion productos\n");
