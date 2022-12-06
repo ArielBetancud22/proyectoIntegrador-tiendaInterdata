@@ -1,9 +1,0 @@
-CONSULTAS:
-
-Concat()
-
-cambiar el switch por un if en InicioTienda
-
-if del case 1 del switch eleccionInicio
-
-Errores finalizacion de la  ejecucion del programa 
