@@ -147,7 +147,7 @@ public class MenuJeans {
         switch (agregarOpcion) {
             case 1 -> {
                 Scanner cant = new Scanner(System.in);
-                System.out.print("Cantidad de prendas: ");
+                System.out.print("Cantidad de curvas: ");
                 cantidad = cant.nextInt();
                 compraProductos += nombreModelo;
                 System.out.println(".........................................................................................................");
