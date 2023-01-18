@@ -140,7 +140,7 @@ public class MenuPantalones {
 
         if (salida == false) {
             Scanner opcion = new Scanner(System.in);
-            System.out.print(¿Desea añadir al carrito? [1. Si / 2. No]: ");
+            System.out.print("¿Desea añadir al carrito? [1. Si / 2. No]: ");
             agregarOpcion = opcion.nextInt();
         }
 
